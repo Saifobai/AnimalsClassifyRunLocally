@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🐾 Animal Classifier</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <div class="logo">🐾 Classifier</div>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="top">
+      <h1>🐾 <span>Animal Image Classifier</span></h1>
+      <p>Upload an image of an animal and get predictions from our models.</p>
+
+      <label for="imageInput" class="custom-upload">📤 Choose an Image</label>
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        onchange="previewImage(event)"
+      />
+      <br />
+
+      <button onclick="sendImage('vgg')">Classify VGG16</button>
+      <button onclick="sendImage('team')">Classify Team</button>
+      <button onclick="clearAll()">Clear</button>
+
+      <div class="container">
+        <div class="box">
+          <h3>📸 Uploaded Image</h3>
+          <img id="preview" src="#" alt="Preview" style="display: none" />
+        </div>
+
+        <div class="box">
+          <h3>📊 VGG16 Result</h3>
+          <div id="result-vgg">
+            <p>Click "Classify VGG16" to see result</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>🧪 Team Model Result</h3>
+          <div id="result-team">
+            <p>Click "Classify Team" to see result</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="name-tape" aria-label="Team members">
+        <div class="name-track">
+          <div class="name-item" tabindex="0">Sam</div>
+          <div class="name-item" tabindex="0">Alex</div>
+          <div class="name-item" tabindex="0">Nicolas</div>
+
+          <div class="name-item" tabindex="0">Sam</div>
+          <div class="name-item" tabindex="0">Alex</div>
+          <div class="name-item" tabindex="0">Nicolas</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

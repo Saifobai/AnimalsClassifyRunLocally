@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Us | 🐾 Animal Classifier</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-XxXxXx..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <div class="logo">🐾 Classifier</div>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="about-content glass-box">
+      <h2 class="fade-in">✨ About Our Project</h2>
+      <p class="fade-in delay-1">
+        We’re a passionate team — <strong>Nicolas</strong>,
+        <strong>Alex</strong>, and <strong>Sam</strong> — bringing machine
+        learning to life through animal image classification.
+      </p>
+      <p class="fade-in delay-2">
+        Our model was trained on a rich dataset of animals and designed to be
+        accurate, fast, and fun to use. We hope this project sparks your
+        curiosity in AI!
+      </p>
+    </div>
+
+    <div id="about">
+      <div class="name-tape" aria-label="Team members">
+        <div class="name-track">
+          <div class="name-item" tabindex="0">Sam</div>
+          <div class="name-item" tabindex="0">Alex</div>
+          <div class="name-item" tabindex="0">Nicolas</div>
+
+          <div class="name-item" tabindex="0">Sam</div>
+          <div class="name-item" tabindex="0">Alex</div>
+          <div class="name-item" tabindex="0">Nicolas</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
